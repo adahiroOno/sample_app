@@ -1,0 +1,242 @@
+find_header: checking for sqlite3.h... -------------------- yes
+
+"/usr/local/bin/gcc-6 -o conftest -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/x86_64-darwin17.7.0 -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/ruby/backward -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1 -I. -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -pipe conftest.c  -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib  -L/usr/local/lib     -lruby-static  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"/usr/local/bin/gcc-6 -E -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/x86_64-darwin17.7.0 -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/ruby/backward -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1 -I. -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -pipe  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sqlite3.h>
+/* end */
+
+--------------------
+
+find_library: checking for sqlite3_libversion_number() in -lsqlite3... -------------------- yes
+
+"/usr/local/bin/gcc-6 -o conftest -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/x86_64-darwin17.7.0 -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/ruby/backward -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1 -I. -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -pipe conftest.c  -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib  -L/usr/local/lib     -lruby-static -lsqlite3  -lpthread -ldl -lobjc "
+conftest.c: In function 't':
+conftest.c:5:53: error: 'sqlite3_libversion_number' undeclared (first use in this function)
+ int t() { void ((*volatile p)()); p = (void ((*)()))sqlite3_libversion_number; return 0; }
+                                                     ^~~~~~~~~~~~~~~~~~~~~~~~~
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))sqlite3_libversion_number; return 0; }
+/* end */
+
+"/usr/local/bin/gcc-6 -o conftest -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/x86_64-darwin17.7.0 -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/ruby/backward -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1 -I. -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -pipe conftest.c  -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib  -L/usr/local/lib     -lruby-static -lsqlite3  -lpthread -ldl -lobjc "
+conftest.c: In function 't':
+conftest.c:5:11: warning: implicit declaration of function 'sqlite3_libversion_number' [-Wimplicit-function-declaration]
+ int t() { sqlite3_libversion_number(); return 0; }
+           ^~~~~~~~~~~~~~~~~~~~~~~~~
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { sqlite3_libversion_number(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_proc_arity()... -------------------- yes
+
+"/usr/local/bin/gcc-6 -o conftest -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/x86_64-darwin17.7.0 -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/ruby/backward -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1 -I. -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -pipe conftest.c  -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib  -L/usr/local/lib    -lsqlite3  -lruby-static -lsqlite3  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))rb_proc_arity; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for sqlite3_initialize()... -------------------- yes
+
+"/usr/local/bin/gcc-6 -o conftest -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/x86_64-darwin17.7.0 -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/ruby/backward -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1 -I. -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -pipe conftest.c  -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib  -L/usr/local/lib    -lsqlite3  -lruby-static -lsqlite3  -lpthread -ldl -lobjc "
+conftest.c: In function 't':
+conftest.c:5:53: error: 'sqlite3_initialize' undeclared (first use in this function)
+ int t() { void ((*volatile p)()); p = (void ((*)()))sqlite3_initialize; return 0; }
+                                                     ^~~~~~~~~~~~~~~~~~
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))sqlite3_initialize; return 0; }
+/* end */
+
+"/usr/local/bin/gcc-6 -o conftest -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/x86_64-darwin17.7.0 -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/ruby/backward -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1 -I. -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -pipe conftest.c  -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib  -L/usr/local/lib    -lsqlite3  -lruby-static -lsqlite3  -lpthread -ldl -lobjc "
+conftest.c: In function 't':
+conftest.c:5:11: warning: implicit declaration of function 'sqlite3_initialize' [-Wimplicit-function-declaration]
+ int t() { sqlite3_initialize(); return 0; }
+           ^~~~~~~~~~~~~~~~~~
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { sqlite3_initialize(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for sqlite3_backup_init()... -------------------- yes
+
+"/usr/local/bin/gcc-6 -o conftest -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/x86_64-darwin17.7.0 -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/ruby/backward -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1 -I. -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -pipe conftest.c  -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib  -L/usr/local/lib    -lsqlite3  -lruby-static -lsqlite3  -lpthread -ldl -lobjc "
+conftest.c: In function 't':
+conftest.c:5:53: error: 'sqlite3_backup_init' undeclared (first use in this function)
+ int t() { void ((*volatile p)()); p = (void ((*)()))sqlite3_backup_init; return 0; }
+                                                     ^~~~~~~~~~~~~~~~~~~
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))sqlite3_backup_init; return 0; }
+/* end */
+
+"/usr/local/bin/gcc-6 -o conftest -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/x86_64-darwin17.7.0 -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/ruby/backward -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1 -I. -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -pipe conftest.c  -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib  -L/usr/local/lib    -lsqlite3  -lruby-static -lsqlite3  -lpthread -ldl -lobjc "
+conftest.c: In function 't':
+conftest.c:5:11: warning: implicit declaration of function 'sqlite3_backup_init' [-Wimplicit-function-declaration]
+ int t() { sqlite3_backup_init(); return 0; }
+           ^~~~~~~~~~~~~~~~~~~
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { sqlite3_backup_init(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for sqlite3_column_database_name()... -------------------- yes
+
+"/usr/local/bin/gcc-6 -o conftest -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/x86_64-darwin17.7.0 -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/ruby/backward -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1 -I. -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -pipe conftest.c  -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib  -L/usr/local/lib    -lsqlite3  -lruby-static -lsqlite3  -lpthread -ldl -lobjc "
+conftest.c: In function 't':
+conftest.c:5:53: error: 'sqlite3_column_database_name' undeclared (first use in this function)
+ int t() { void ((*volatile p)()); p = (void ((*)()))sqlite3_column_database_name; return 0; }
+                                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))sqlite3_column_database_name; return 0; }
+/* end */
+
+"/usr/local/bin/gcc-6 -o conftest -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/x86_64-darwin17.7.0 -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/ruby/backward -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1 -I. -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -pipe conftest.c  -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib  -L/usr/local/lib    -lsqlite3  -lruby-static -lsqlite3  -lpthread -ldl -lobjc "
+conftest.c: In function 't':
+conftest.c:5:11: warning: implicit declaration of function 'sqlite3_column_database_name' [-Wimplicit-function-declaration]
+ int t() { sqlite3_column_database_name(); return 0; }
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { sqlite3_column_database_name(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for sqlite3_enable_load_extension()... -------------------- no
+
+"/usr/local/bin/gcc-6 -o conftest -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/x86_64-darwin17.7.0 -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/ruby/backward -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1 -I. -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -pipe conftest.c  -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib  -L/usr/local/lib    -lsqlite3  -lruby-static -lsqlite3  -lpthread -ldl -lobjc "
+conftest.c: In function 't':
+conftest.c:5:53: error: 'sqlite3_enable_load_extension' undeclared (first use in this function)
+ int t() { void ((*volatile p)()); p = (void ((*)()))sqlite3_enable_load_extension; return 0; }
+                                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))sqlite3_enable_load_extension; return 0; }
+/* end */
+
+"/usr/local/bin/gcc-6 -o conftest -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/x86_64-darwin17.7.0 -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/ruby/backward -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1 -I. -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -pipe conftest.c  -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib  -L/usr/local/lib    -lsqlite3  -lruby-static -lsqlite3  -lpthread -ldl -lobjc "
+conftest.c: In function 't':
+conftest.c:5:11: warning: implicit declaration of function 'sqlite3_enable_load_extension' [-Wimplicit-function-declaration]
+ int t() { sqlite3_enable_load_extension(); return 0; }
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Undefined symbols for architecture x86_64:
+  "_sqlite3_enable_load_extension", referenced from:
+      _t in ccpZxfpz.o
+ld: symbol(s) not found for architecture x86_64
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { sqlite3_enable_load_extension(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for sqlite3_load_extension()... -------------------- no
+
+"/usr/local/bin/gcc-6 -o conftest -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/x86_64-darwin17.7.0 -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/ruby/backward -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1 -I. -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -pipe conftest.c  -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib  -L/usr/local/lib    -lsqlite3  -lruby-static -lsqlite3  -lpthread -ldl -lobjc "
+conftest.c: In function 't':
+conftest.c:5:53: error: 'sqlite3_load_extension' undeclared (first use in this function)
+ int t() { void ((*volatile p)()); p = (void ((*)()))sqlite3_load_extension; return 0; }
+                                                     ^~~~~~~~~~~~~~~~~~~~~~
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))sqlite3_load_extension; return 0; }
+/* end */
+
+"/usr/local/bin/gcc-6 -o conftest -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/x86_64-darwin17.7.0 -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/ruby/backward -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1 -I. -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/Users/sadahiro/.rbenv/versions/1.9.3-p0/include   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -pipe conftest.c  -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib -L. -L/Users/sadahiro/.rbenv/versions/1.9.3-p0/lib  -L/usr/local/lib    -lsqlite3  -lruby-static -lsqlite3  -lpthread -ldl -lobjc "
+conftest.c: In function 't':
+conftest.c:5:11: warning: implicit declaration of function 'sqlite3_load_extension' [-Wimplicit-function-declaration]
+ int t() { sqlite3_load_extension(); return 0; }
+           ^~~~~~~~~~~~~~~~~~~~~~
+Undefined symbols for architecture x86_64:
+  "_sqlite3_load_extension", referenced from:
+      _t in cckur9Cs.o
+ld: symbol(s) not found for architecture x86_64
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { sqlite3_load_extension(); return 0; }
+/* end */
+
+--------------------
+

@@ -1,0 +1,2 @@
+set CC_FOR_TARGET "/usr/local/bin/gcc-6"
+set CXX_FOR_TARGET "g++"

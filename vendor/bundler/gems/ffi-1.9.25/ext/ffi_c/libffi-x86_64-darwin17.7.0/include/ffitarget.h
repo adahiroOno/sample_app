@@ -1,0 +1,1 @@
+/Users/sadahiro/rails_projects/sample_app/vendor/bundler/gems/ffi-1.9.25/ext/ffi_c/libffi/src/x86/ffitarget.h
