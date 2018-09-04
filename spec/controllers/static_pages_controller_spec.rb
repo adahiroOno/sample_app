@@ -1,12 +1,17 @@
-require 'spec_helper'
+require "spec_helper"
 
-describe StaticPagesController do
+class StaticPagesController < ApplicationController
 
-  describe "GET '...'" do
-    it "returns http success" do
-      get '...'
-      response.should be_success
-    end
+  def home
+  end
+
+  def help
+  end
+
+def about
+  end
+
+  def contact
   end
 
 end
